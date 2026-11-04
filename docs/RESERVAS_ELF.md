@@ -1,0 +1,7 @@
+# Reserva externa e carregamento parcial
+
+A saída da inspeção do ELF local, fornecida pelo usuário, registra 39 cabeçalhos PT_LOAD; o último reserva 0x800 bytes em 0x03000000 e possui filesz zero. O relatório `reports/relatorio.txt` também registra essa faixa. A finalidade da reserva e a configuração de tradução de endereços no jogo ainda não foram comprovadas. Não se deve identificá-la como scratchpad: o mapa documentado em [Memory.cpp do PCSX2](https://github.com/PCSX2/pcsx2/blob/1ccd6a8dc3574771c138849039d71951a3a1c175/pcsx2/Memory.cpp) coloca scratchpad em 0x70000000. Isso não prova o que a reserva representa no jogo.
+
+O carregador continua recusando reservas externas por padrão. Para análise, `allow_unmapped_reservations=True` permite somente reservas inteiramente externas, sem conteúdo de arquivo e sem ultrapassar o espaço de endereços de 32 bits. A lista `unresolved` descreve cada uma; essas regiões não foram mapeadas nem zeradas e o carregamento é parcial. Segmentos com dados externos, faixas parcialmente sobrepostas à RAM e faixas inválidas continuam recusados. Isso não implementa tradução de endereços, dispositivos ou inicialização do jogo.
+
+Execute `python tools/verificar_ram_elf.py ~/analise_ps2/game.elf` para avaliar o ELF privado localmente. O comando anuncia explicitamente qualquer reserva pendente e não executa o jogo. O objetivo é verificar a viabilidade desta etapa de análise, não declarar o ELF pronto para execução.

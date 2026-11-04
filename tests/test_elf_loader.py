@@ -1,7 +1,7 @@
 import struct
 import unittest
 
-from tools.elf_loader import load_elf
+from tools.elf_loader import load_elf, UnmappedReservation
 
 
 def make_elf(segments):
@@ -39,6 +39,24 @@ class ElfLoaderTests(unittest.TestCase):
                      make_elf([])[:30]):
             with self.subTest(data=data), self.assertRaises(ValueError):
                 load_elf(data, 32)
+
+    def test_external_reservation_requires_explicit_opt_in(self):
+        data = make_elf([(4, b'ABCD', 8), (0x03000000, b'', 0x800)])
+        with self.assertRaises(ValueError):
+            load_elf(data, 32)
+        elf = load_elf(data, 32, allow_unmapped_reservations=True)
+        self.assertEqual(elf.ram[4:12], b'ABCD\0\0\0\0')
+        self.assertEqual(elf.unresolved, (UnmappedReservation(1, 0x03000000, 0x800),))
+
+    def test_opt_in_does_not_accept_data_partial_overlap_or_overflow(self):
+        for segment in ((32, b'X', 1), (31, b'', 2), (0xfffffff0, b'', 32)):
+            with self.subTest(segment=segment), self.assertRaises(ValueError):
+                load_elf(make_elf([segment]), 32, allow_unmapped_reservations=True)
+
+    def test_empty_segment_offset_beyond_eof(self):
+        data = bytearray(make_elf([(4, b'', 8)]))
+        struct.pack_into('<I', data, 56, 0xffffffff)
+        self.assertEqual(load_elf(data, 32).ram[4:12], bytes(8))
 
 
 if __name__ == '__main__':
