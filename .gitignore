@@ -1,0 +1,15 @@
+build/
+*.iso
+*.ISO
+*.elf
+*.ELF
+*.apk
+*.bin
+*.zip
+*.tar.gz
+__pycache__/
+*.pyc
+.env
+.env.*
+*.key
+*.pem

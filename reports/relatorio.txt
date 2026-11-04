@@ -1,0 +1,163 @@
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           MIPS R3000
+  Version:                           0x1
+  Entry point address:               0x100008
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          2924656 (bytes into file)
+  Flags:                             0x20924000, eabi64, 5900, mips3
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         39
+  Size of section headers:           40 (bytes)
+  Number of section headers:         45
+  Section header string table index: 1
+There are 45 section headers, starting at offset 0x2ca070:
+
+Section Headers:
+  [Nr] Name              Type            Address  Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .shstrtab         STRTAB          00000000 2ca000 00002d 01      0   0  1
+  [ 2] .strtab           STRTAB          00000000 000000 000000 01      0   0  1
+  [ 3] .symtab           SYMTAB          00000000 000000 000000 10      2   0  1
+  [ 4]                   PROGBITS        00100000 000800 2c9680 01 WAX  0   0 2048
+  [ 5]                   PROGBITS        005fa000 2ca000 000000 01 WAX  0   0 2048
+  [ 6]                   PROGBITS        005fa000 2ca000 000000 01 WAX  0   0 2048
+  [ 7]                   PROGBITS        007dd000 2ca000 000000 01 WAX  0   0 2048
+  [ 8]                   PROGBITS        007dd000 2ca000 000000 01 WAX  0   0 2048
+  [ 9]                   PROGBITS        007dd000 2ca000 000000 01 WAX  0   0 2048
+  [10]                   PROGBITS        007dd000 2ca000 000000 01 WAX  0   0 2048
+  [11]                   PROGBITS        007dd000 2ca000 000000 01 WAX  0   0 2048
+  [12]                   PROGBITS        00889800 2ca000 000000 01 WAX  0   0 2048
+  [13]                   PROGBITS        00889800 2ca000 000000 01 WAX  0   0 2048
+  [14]                   PROGBITS        008cb000 2ca000 000000 01 WAX  0   0 2048
+  [15]                   PROGBITS        008cb000 2ca000 000000 01 WAX  0   0 2048
+  [16]                   PROGBITS        008cb000 2ca000 000000 01 WAX  0   0 2048
+  [17]                   PROGBITS        008cb000 2ca000 000000 01 WAX  0   0 2048
+  [18]                   PROGBITS        008cb000 2ca000 000000 01 WAX  0   0 2048
+  [19]                   PROGBITS        008cb000 2ca000 000000 01 WAX  0   0 2048
+  [20]                   PROGBITS        008cb000 2ca000 000000 01 WAX  0   0 2048
+  [21]                   PROGBITS        00904000 2ca000 000000 01 WAX  0   0 2048
+  [22]                   PROGBITS        00904000 2ca000 000000 01 WAX  0   0 2048
+  [23]                   PROGBITS        00904000 2ca000 000000 01 WAX  0   0 2048
+  [24]                   PROGBITS        00904000 2ca000 000000 01 WAX  0   0 2048
+  [25]                   PROGBITS        00904000 2ca000 000000 01 WAX  0   0 2048
+  [26]                   PROGBITS        00ab8800 2ca000 000000 01 WAX  0   0 2048
+  [27]                   PROGBITS        00ab8800 2ca000 000000 01 WAX  0   0 2048
+  [28]                   PROGBITS        00ab8800 2ca000 000000 01 WAX  0   0 2048
+  [29]                   PROGBITS        00b68800 2ca000 000000 01 WAX  0   0 2048
+  [30]                   PROGBITS        00b68800 2ca000 000000 01 WAX  0   0 2048
+  [31]                   PROGBITS        00c9a800 2ca000 000000 01 WAX  0   0 2048
+  [32]                   PROGBITS        00c9a800 2ca000 000000 01 WAX  0   0 2048
+  [33]                   PROGBITS        00c9a800 2ca000 000000 01 WAX  0   0 2048
+  [34]                   PROGBITS        00c9a800 2ca000 000000 01 WAX  0   0 2048
+  [35]                   PROGBITS        00c9a800 2ca000 000000 01 WAX  0   0 2048
+  [36]                   PROGBITS        00c9a800 2ca000 000000 01 WAX  0   0 2048
+  [37]                   PROGBITS        00c9a800 2ca000 000000 01 WAX  0   0 2048
+  [38]                   PROGBITS        00d0a000 2ca000 000000 01 WAX  0   0 2048
+  [39]                   PROGBITS        00d0a000 2ca000 000000 01 WAX  0   0 2048
+  [40]                   PROGBITS        00e0a000 2ca000 000000 01 WAX  0   0 2048
+  [41]                   PROGBITS        01d8d800 2ca000 000000 01  WA  0   0 16
+  [42]                   PROGBITS        03000000 2ca000 000000 01 WAX  0   0 2048
+  [43] .comment          PROGBITS        00000000 2ca02d 00002b 01      0   0  1
+  [44] .reginfo          MIPS_REGINFO    00000000 2ca058 000018 01      0   0  4
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  R (retain), p (processor specific)
+
+Elf file type is EXEC (Executable file)
+Entry point 0x100008
+There are 39 program headers, starting at offset 52
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  LOAD           0x000800 0x00100000 0x00100000 0x2c9680 0x4fa000 RWE 0x800
+  LOAD           0x2ca000 0x005fa000 0x005fa000 0x00000 0x3d000 RWE 0x800
+  LOAD           0x2ca000 0x005fa000 0x005fa000 0x00000 0x1e3000 RWE 0x800
+  LOAD           0x2ca000 0x007dd000 0x007dd000 0x00000 0xac800 RWE 0x800
+  LOAD           0x2ca000 0x007dd000 0x007dd000 0x00000 0x00800 RWE 0x800
+  LOAD           0x2ca000 0x007dd000 0x007dd000 0x00000 0x06000 RWE 0x800
+  LOAD           0x2ca000 0x007dd000 0x007dd000 0x00000 0x28000 RWE 0x800
+  LOAD           0x2ca000 0x007dd000 0x007dd000 0x00000 0x14800 RWE 0x800
+  LOAD           0x2ca000 0x00889800 0x00889800 0x00000 0x30000 RWE 0x800
+  LOAD           0x2ca000 0x00889800 0x00889800 0x00000 0x41800 RWE 0x800
+  LOAD           0x2ca000 0x008cb000 0x008cb000 0x00000 0x39000 RWE 0x800
+  LOAD           0x2ca000 0x008cb000 0x008cb000 0x00000 0x0c000 RWE 0x800
+  LOAD           0x2ca000 0x008cb000 0x008cb000 0x00000 0x05000 RWE 0x800
+  LOAD           0x2ca000 0x008cb000 0x008cb000 0x00000 0x2a800 RWE 0x800
+  LOAD           0x2ca000 0x008cb000 0x008cb000 0x00000 0x13000 RWE 0x800
+  LOAD           0x2ca000 0x008cb000 0x008cb000 0x00000 0x38800 RWE 0x800
+  LOAD           0x2ca000 0x008cb000 0x008cb000 0x00000 0x0d800 RWE 0x800
+  LOAD           0x2ca000 0x00904000 0x00904000 0x00000 0x396800 RWE 0x800
+  LOAD           0x2ca000 0x00904000 0x00904000 0x00000 0x1b4800 RWE 0x800
+  LOAD           0x2ca000 0x00904000 0x00904000 0x00000 0x40800 RWE 0x800
+  LOAD           0x2ca000 0x00904000 0x00904000 0x00000 0xdf800 RWE 0x800
+  LOAD           0x2ca000 0x00904000 0x00904000 0x00000 0x00800 RWE 0x800
+  LOAD           0x2ca000 0x00ab8800 0x00ab8800 0x00000 0x62800 RWE 0x800
+  LOAD           0x2ca000 0x00ab8800 0x00ab8800 0x00000 0xb0000 RWE 0x800
+  LOAD           0x2ca000 0x00ab8800 0x00ab8800 0x00000 0x00800 RWE 0x800
+  LOAD           0x2ca000 0x00b68800 0x00b68800 0x00000 0x165800 RWE 0x800
+  LOAD           0x2ca000 0x00b68800 0x00b68800 0x00000 0x00800 RWE 0x800
+  LOAD           0x2ca000 0x00c9a800 0x00c9a800 0x00000 0x33000 RWE 0x800
+  LOAD           0x2ca000 0x00c9a800 0x00c9a800 0x00000 0x6f800 RWE 0x800
+  LOAD           0x2ca000 0x00c9a800 0x00c9a800 0x00000 0x00800 RWE 0x800
+  LOAD           0x2ca000 0x00c9a800 0x00c9a800 0x00000 0x00800 RWE 0x800
+  LOAD           0x2ca000 0x00c9a800 0x00c9a800 0x00000 0x00800 RWE 0x800
+  LOAD           0x2ca000 0x00c9a800 0x00c9a800 0x00000 0x00800 RWE 0x800
+  LOAD           0x2ca000 0x00c9a800 0x00c9a800 0x00000 0x00800 RWE 0x800
+  LOAD           0x2ca000 0x00d0a000 0x00d0a000 0x00000 0xc7800 RWE 0x800
+  LOAD           0x2ca000 0x00d0a000 0x00d0a000 0x00000 0x100000 RWE 0x800
+  LOAD           0x2ca000 0x00e0a000 0x00e0a000 0x00000 0xf83800 RWE 0x800
+  LOAD           0x2ca000 0x01d8d800 0x01d8d800 0x00000 0x00000 RW  0x10
+  LOAD           0x2ca000 0x03000000 0x03000000 0x00000 0x00800 RWE 0x800
+
+ Section to Segment mapping:
+  Segment Sections...
+   00      
+   01     
+   02     
+   03     
+   04     
+   05     
+   06     
+   07     
+   08     
+   09     
+   10     
+   11     
+   12     
+   13     
+   14     
+   15     
+   16     
+   17     
+   18     
+   19     
+   20     
+   21     
+   22     
+   23     
+   24     
+   25     
+   26     
+   27     
+   28     
+   29     
+   30     
+   31     
+   32     
+   33     
+   34     
+   35     
+   36     
+   37     
+   38     
+   None   .shstrtab .strtab .symtab                                       .comment .reginfo 
